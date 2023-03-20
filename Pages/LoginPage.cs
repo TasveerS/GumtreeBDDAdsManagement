@@ -18,8 +18,8 @@ namespace GumtreeAdsBDD.Pages
         }
 
         //WebElements
-        protected internal IWebElement InputUsername => _driver.FindElement(By.XPath("//div[@class='login-email-field input-wrapper']/input[@class='input-main']"));
-        protected internal IWebElement InputPassword => _driver.FindElement(By.XPath("//div[@class='login-pwd-field input-wrapper']/input[@class='input-main']"));
+        protected internal IWebElement InputUsername => _driver.FindElement(By.XPath("//div[contains(@class,'login-email-field')]//input[contains(@class,'input-main')]"));
+        protected internal IWebElement InputPassword => _driver.FindElement(By.XPath("//div[contains(@class,'login-pwd-field')]//input[contains(@class,'input-main')]"));
         protected internal IWebElement SignInButton => _driver.FindElement(By.CssSelector(".login-submit"));
 
         //Methods
