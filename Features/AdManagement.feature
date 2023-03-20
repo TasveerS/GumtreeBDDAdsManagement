@@ -1,4 +1,5 @@
 ﻿Feature: AdManagement
+This scenario aims to test the appending of the ad posting feature 
 
   Scenario: Edit Gumtree Ad with Random Number
     Given I navigate to the Gumtree South Africa website
