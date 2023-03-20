@@ -22,7 +22,15 @@ namespace GumtreeAdsBDD.Pages
         //Methods
         public string NewPostedAdTitle()
         {
-            return PostedAdTitle.Text;
+          try
+            {
+                return PostedAdTitle.Text;
+            }
+            catch (Exception E)
+            {
+                Console.WriteLine("Test Fail: unable get new ad's title  : {0}", E.Message);
+                throw;
+            }
         }
     }
 }
