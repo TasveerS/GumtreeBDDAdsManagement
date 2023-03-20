@@ -30,20 +30,44 @@ namespace GumtreeAdsBDD.Pages
         //Methods
         public string GetAdTitle()
         {
-            return AdTitle.Text;
+            try
+            {
+                return AdTitle.Text;
+            }
+            catch (Exception E)
+            {
+                Console.WriteLine("Test Fail: unable to get the title of current ad  : {0}", E.Message);
+                throw;
+            }
         }
 
         public void AppendAd()
         {
-            Helper.Helper.ScrollToMiddle(); //Scrolls to middle of the screen where the title textbox is
-            ListingTitleField.Click();
-            ListingTitleField.SendKeys(RandomNumber);
+             try
+            {
+                Helper.Helper.ScrollToMiddle(); //Scrolls to middle of the screen where the title textbox is
+                ListingTitleField.Click();
+                ListingTitleField.SendKeys(RandomNumber);
+            }
+            catch (Exception E)
+            {
+                Console.WriteLine("Test Fail:unable to scroll to the middle of the website  : {0}", E.Message);
+                throw;
+            }
         }
 
         public void PostAd()
         {
-            Helper.Helper.ScrollToBottom(); // Scrolls to bottom of the screen where the post button is located
-            PostButton.Click();
+               try
+            {
+                Helper.Helper.ScrollToBottom(); // Scrolls to bottom of the screen where the post button is located
+                PostButton.Click();
+            }
+            catch (Exception E)
+            {
+                Console.WriteLine("Test Fail:unable post the ad  : {0}", E.Message);
+                throw;
+            }
         }
     }
 }
